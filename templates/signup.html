@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- normalize -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Sign Up</h3>
+                        <form action="{{ url_for('signup')}}" method="POST">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="firstname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname" required>
+                                </div>
+                                <div class="col">
+                                    <label for="lastname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}"
+                                        required>
+                                </div>
+                                <div class="col">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        minlength="8" required>
+                                </div>
+                                <div class="col">
+                                    <label for="confirmpassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmpassword"
+                                        name="confirmpassword" minlength="8" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mt-4">Sign Up</button>
+                        </form>
+                        <p class="text-center mt-3">Already have an account? <a href="#">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.external-navbar').load("{{ url_for('navbar') }}")
+        })
+    </script>
+    <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</body>
+
+</html>

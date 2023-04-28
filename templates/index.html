@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyRecipeBook</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <div class="external-navbar"></div>
+  <!-- end of Navbar -->
+  <!-- main -->
+  <main class="page">
+    <!--Slider-->
+    <div id="slider">
+      <div class="slides">
+        <img src="{{ url_for('static', filename='slider1.jpg') }}" alt="Slider 1">
+      </div>
+
+      <div class="slides">
+        <img src="{{ url_for('static', filename='assets/sliders/slider 2.jpg') }}" />
+      </div>
+
+      <div class="slides">
+        <img src="{{ url_for('static', filename='assets/sliders/slider 3.jpg') }}" />
+      </div>
+
+      <div class="slides">
+        <img src="{{ url_for('static', filename='assets/sliders/slider 4.jpg') }}" />
+      </div>
+
+      <div class="slides">
+        <img src="{{ url_for('static', filename='assets/sliders/slider 5.jpg') }}" />
+      </div>
+
+      <div id="dot">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+          class="dot"></span>
+      </div>
+    </div>
+
+    <section class="recipes-container">
+      <!-- tag container -->
+      <div class="tags-container">
+        <h4>recipes</h4>
+        <div class="tags-list">
+          <a href="/tag_template">Appetizers </a>
+          <a href="/tag_template">Soups </a>
+          <a href="/tag_template">Main course </a>
+          <a href="/tag_template">Desserts </a>
+        </div>
+      </div>
+      <!-- end of tag container -->
+      <!-- recipes list -->
+      <div class="recipes-list">
+        <!-- single recipe -->
+        <a href="/recipes/biryani" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-1.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Hydrabadi Biryani</h5>
+          <p>Prep : 2 hr 30 mins. | Cook : 1 hr 15 mins</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="./recipes/mango_cake" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-2.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Mango Cake with Cream</h5>
+          <p>Prep : 1 hr 30 mins. | Cook : 45 mins</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="./recipes/spicy_shrimp" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-3.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Sautéed Spicy Shrimp</h5>
+          <p>Prep : 1 hr 0 mins. | Cook : 50 mins</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="./recipes/palak_dal" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-4.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Palak Dal</h5>
+          <p>Prep : 1 hr 25 mins. | Cook : 45 mins.</p>
+        </a>
+        <!-- end of single recipe -->
+        <!-- single recipe -->
+        <a href="./recipes/banana_ice_cream" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-5.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Chunky Banana Ice cream</h5>
+          <p>Prep : 1 hr 25 mins. | Cook : 45 mins.</p>
+        </a>
+        <a href="./recipes/spaghetti" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-6.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Spaghetti Squash Pasta</h5>
+          <p>Prep : 1 hr 15 mins. | Cook : 50 mins.</p>
+        </a>
+        <a href="./recipes/dosa" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-7.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Classic South Indian Dosa</h5>
+          <p>Prep : 1 hr 0 mins. | Cook : 15 mins.</p>
+        </a>
+        <a href="./recipes/dumpling_soup" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-8.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Chicken Dumpling soup</h5>
+          <p>Prep : 0 hr 20 mins. | Cook : 2 hr 15 mins.</p>
+        </a>
+        <a href="./recipes/french_onion_soup" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-9.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>French Onion Soup</h5>
+          <p>Prep : 0 hr 30 mins. | Cook : 30 mins.</p>
+        </a>
+        <!-- end of single recipe -->
+      </div>
+      <!-- end of recipes list -->
+    </section>
+  </main>
+  <!-- end of main -->
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">MyRecipeBook</span> Designed by
+      <a href="/about">The Coders</a>
+    </p>
+  </footer>
+</body>
+
+<script src="{{ url_for('static', filename='./scripts/image-slider.js') }}"></script>
+<script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+<script type="text/javascript">
+  $(function () {
+    $('.external-navbar').load("{{ url_for('navbar') }}")
+  })
+</script>
+<script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="topnav" id="topnav">
+      <a href="/" class="logo"> MyRecipeBook </a>
+      {% if not 'user_info' in session %}
+      <a class="links" href="/signup"> SignUp </a>
+      <a class="links" href="/signin"> SignIn </a>
+      {% endif %}
+      {% if 'user_info' in session %}
+      <a class="links" href="/signout"> Signout </a>
+      {% endif %}
+      <a class="links" href="/contact"> Contact </a>
+      <a class="links" href="/about"> About </a>
+      <a class="links" href="/tags"> Tags </a>
+      <a class="links" href="/recipes"> Recipes </a>
+      <a class="links" href="/"> Home </a>
+      <button class="icon" onclick="toggle()">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+  </body>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+</html>

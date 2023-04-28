@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Recipe || Final</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+    <script src="{{ url_for('static', filename='scripts/min.chart.js') }}"></script>
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-7.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Classic South Indian Dosa</h2>
+            <p>
+              Dosa is a popular South Indian dish made by grinding fermented
+              rice and urad dal batter into a thin crepe. It is typically served
+              with chutney and sambar, and can be filled with a variety of
+              ingredients such as potato masala, paneer, or cheese. Dosa is
+              crispy on the outside and soft on the inside.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>1 hr 30 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>0 hr 15 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>3 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Masala Dosa</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/CCab5oh0ZOc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                In a bowl take ½ cup idli rice or parboiled rice along with ½
+                cup regular rice. Instead of adding regular rice, you can also
+                make the dosa with a total of 1 cup idli rice as I have shown in
+                the video.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                To the same bowl, add ¼ cup urad dal and ⅛ teaspoon fenugreek
+                seeds (methi). Rinse poha once or twice in water and then add to
+                the bowl containing the rinsed rice+lentils+methi seeds.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Add 1.5 cups of water and mix. Cover with a lid and soak
+                everything for 4 to 5 hours.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Add ⅔ to ¾ cup water and grind or blend till you get a fine
+                grainy consistency of rice in the batter. A smooth consistency
+                of the batter is also fine. If the mixer gets heated up, then
+                stop and wait for some minutes. When the mixer cools down, grind
+                again. Depending on the jar capacity, you can grind everything
+                once or in two batches. I ground in two batches and added a
+                total of ¾ cup water.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 5</p>
+                <div></div>
+              </header>
+              <p>
+                Heat a cast iron pan. When the pan becomes hot, spread ¼ to ½
+                teaspoon oil all over the pan with a spoon or with a thick paper
+                towel dipped in oil. For a richer taste, you can cook the dosa
+                with ghee or butter.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 6</p>
+                <div></div>
+              </header>
+              <p>
+                When the dosa has nicely browned from the bottom and the surface
+                looks well cooked, soft without any specks of undercooked
+                batter, then fold with a spatula and lift it from the pan.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">lentils</p>
+              <p class="single-ingredient">Rice</p>
+              <p class="single-ingredient">Yogurt</p>
+              <p class="single-ingredient">Spices</p>
+              <p class="single-ingredient">Poha</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Blender</p>
+              <p class="single-tool">Pan</p>
+              <p class="single-tool">Spatula</p>
+              <p class="single-tool">Lid for Pan</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="dosa-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="dosa-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script>
+    // Dosa Charts
+
+    // Dosa Line Chart
+    const dosa_line_chart_data = {
+      ctx: document.getElementById('dosa-line-chart'),
+      type: 'line',
+      title: 'Popularity of Dosa over the years',
+      data: [12, 17, 16, 14, 16, 18],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const dosa_line_chart_config = {
+      type: dosa_line_chart_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: dosa_line_chart_data.title,
+          },
+        },
+      },
+      data: {
+        labels: dosa_line_chart_data.labels,
+        datasets: [
+          {
+            label: dosa_line_chart_data.label,
+            data: dosa_line_chart_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(dosa_line_chart_data.ctx, dosa_line_chart_config)
+
+    //Dosa Pie Chart
+    const dosa_pie_chart_data = {
+      ctx: document.getElementById('dosa-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 338 Cal per 1 serving of Dosa',
+      data: [8, 10, 12, 7, 2, 6],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const dosa_pie_chart_config = {
+      type: dosa_pie_chart_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: dosa_pie_chart_data.title,
+          },
+        },
+      },
+      data: {
+        labels: dosa_pie_chart_data.labels,
+        datasets: [
+          {
+            label: dosa_pie_chart_data.label,
+            data: dosa_pie_chart_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(dosa_pie_chart_data.ctx, dosa_pie_chart_config)
+
+    // end of Dosa Charts
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

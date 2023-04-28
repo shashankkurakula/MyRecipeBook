@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Dumpling</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+  </head>
+  <body>
+    <!-- section  -->
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <!-- end of section -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-8.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Chicken Dumpling Soup</h2>
+            <p>
+              I've enjoyed making this rich homemade chicken dumpling soup
+              recipe for more than 40 years. Every time I serve it, I remember
+              my southern grandma, who was very special to me and was known as
+              an outstanding cook. —Paulette Balda, Prophetstown, Illinois.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>0 hr 20 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>2 hr 15 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>3 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Dumpling Soup</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/R0uk7kwLgRw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Place the chicken, water, bouillon, peppercorns and cloves in a
+                stockpot. Cover and bring to a boil; skim foam. Reduce heat;
+                cover and simmer until chicken is tender, 45-60 minutes. Strain
+                broth; return to stockpot.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Remove chicken and set aside until cool enough to handle. Remove
+                meat from bones; discard bones and skin. Cut chicken into
+                chunks. Cool broth and skim off fat.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Return chicken to stockpot with soups, vegetables and
+                seasonings; bring to a boil. Reduce heat; cover and simmer for 1
+                hour. Uncover; increase heat to a gentle boil. Discard bay leaf.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                For dumplings, combine dry ingredients in a medium bowl. Stir in
+                egg, butter and enough milk to make a moist stiff batter.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Drop by teaspoonfuls into soup. Cover and cook without lifting
+                the lid, 18-20 minutes. If desired, sprinkle with parsley.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">1 broiler/fryer chicken</p>
+              <p class="single-ingredient">5 chicken bouillon cubes</p>
+              <p class="single-ingredient">6 whole peppercorns</p>
+              <p class="single-ingredient">3 whole cloves</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Blender</p>
+              <p class="single-tool">Large Heavy Pot With Lid</p>
+              <p class="single-tool">Measuring Spoons</p>
+              <p class="single-tool">Measuring Cups</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="dumpling-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="dumpling-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='scripts/min.chart.js') }}"></script>
+  <script>
+    // Biryani Charts
+
+    // Biryani Line Chart
+    const line_data = {
+      ctx: document.getElementById('dumpling-line-chart'),
+      type: 'line',
+      title: 'Popularity of Chicken Dumpling Soup over the years',
+      data: [16, 14, 16, 15, 16, 16],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const line_config = {
+      type: line_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: line_data.title,
+          },
+        },
+      },
+      data: {
+        labels: line_data.labels,
+        datasets: [
+          {
+            label: line_data.label,
+            data: line_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(line_data.ctx, line_config)
+
+    //Biryani Pie Chart
+    const pie_data = {
+      ctx: document.getElementById('dumpling-pie-chart'),
+      type: 'pie',
+      title:
+        'Nutrition Facts: Total 548 Cal per 1 serving of Chicken Dumpling Soup',
+      data: [10, 22, 4, 21, 4, 6],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const pie_config = {
+      type: pie_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: pie_data.title,
+          },
+        },
+      },
+      data: {
+        labels: pie_data.labels,
+        datasets: [
+          {
+            label: pie_data.label,
+            data: pie_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(pie_data.ctx, pie_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

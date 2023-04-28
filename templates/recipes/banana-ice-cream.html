@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banana Ice Cream</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='assets/recipes/recipe-5.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Chunky Banana Ice cream</h2>
+            <p>
+              Bananas are a boon for any ice cream recipe. They naturally
+              sweeten it, while also giving that amazing creamy texture. So it’s
+              like a double bonus. You can reduce the amount of cream as well as
+              sugar, and still have a rich and creamy ice cream.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>1 hr 10 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>0 hr 45 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>4 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Banana Ice Cream</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/wZxVSBIEJng"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Walnut Milk and Custard: Process walnuts with milk and filter.
+                Prepare milk custard and cool on ice bath.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Ice Cream Base: Blend bananas and nut-milk. Combine, milk
+                custard, nut-banana mixture and heavy cream. Chill the mixture
+                overnight.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Churning and Add-Ins: Freeze the mixture in ice cream maker. Add
+                nuts and chocolate chunks when ice cream starts to set. Transfer
+                ice cream to container and drizzle chocolate sauce between the
+                layers.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Whipped Cream Frosting: Whisk heavy cream with powdered sugar
+                and vanilla until stiff peak stage. Refrigerate until use.
+                Transfer some whipped cream to a piping bag fitted with an open
+                star tip.
+              </p>
+            </div>
+
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Bananas</p>
+              <p class="single-ingredient">Walnuts</p>
+              <p class="single-ingredient">Milk</p>
+              <p class="single-ingredient">Honey</p>
+              <p class="single-ingredient">Chocolate</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Ice maker</p>
+              <p class="single-tool">Blender</p>
+              <p class="single-tool">whisker</p>
+              <p class="single-tool">Spatula</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="banana-ice-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="banana-ice-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='./scripts/min.chart.js') }}"></script>
+  <script>
+    // Biryani Charts
+
+    // Biryani Line Chart
+    const line_data = {
+      ctx: document.getElementById('banana-ice-line-chart'),
+      type: 'line',
+      title: 'Popularity of Ice Cream over the years',
+      data: [10, 16, 14, 17, 18, 18],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const line_config = {
+      type: line_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: line_data.title,
+          },
+        },
+      },
+      data: {
+        labels: line_data.labels,
+        datasets: [
+          {
+            label: line_data.label,
+            data: line_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(line_data.ctx, line_config)
+
+    //Biryani Pie Chart
+    const pie_data = {
+      ctx: document.getElementById('banana-ice-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 548 Cal per 1 serving of Banana Ice cream',
+      data: [30, 40, 8, 35, 2, 1],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const pie_config = {
+      type: pie_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: pie_data.title,
+          },
+        },
+      },
+      data: {
+        labels: pie_data.labels,
+        datasets: [
+          {
+            label: pie_data.label,
+            data: pie_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(pie_data.ctx, pie_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

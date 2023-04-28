@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spaghetti</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+  </head>
+  <body>
+    <!-- section  -->
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <!-- end of section -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-6.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Spaghetti Squash Pasta</h2>
+            <p>
+              Spaghetti squash with chicken - lower in calories and
+              carbohydrates, high in protein, healthy fats, aromatic flavors and
+              with a delightful taste and texture.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>2 hr 30 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>1 hr 15 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>3 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Chicken Spaghetti</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/mwf9OvmdHjY"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Using a sharp knife cut the spaghetti squash into two halves and
+                discard the seeds. Place the squash on a baking sheet facing up.
+                Drizzle 1 teaspoon oil and brush it evenly. Sprinkle two pinches
+                of salt and black pepper. Bake for 30 to 45 minutes until
+                tender.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Meanwhile heat the remaining olive oil in a cooking pot at
+                medium heat. Add the sliced onions and sauté until golden brown.
+                Cut the chicken breast/thigh meat into small pieces or you may
+                also mince it.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Add the cut or minced chicken to the onions and sauté until the
+                released juices evaporate. Next add the ginger, garlic and stir
+                for a few minutes.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Then add the chili powder or jalapeno, turmeric, curry powder,
+                yogurt and salt as per taste. Stir and let simmer for a few
+                minutes.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 5</p>
+                <div></div>
+              </header>
+              <p>
+                When the spaghetti squash is fully baked take it out of the oven
+                and allow it to cool. Using a fork scrape inside of the squash
+                to obtain noodle like strands. Reserve 2 cups for this recipe
+                and save the remaining for any other use.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 6</p>
+                <div></div>
+              </header>
+              <p>
+                Layer the vermicelli, spaghetti squash and chicken or mix it all
+                together gently and serve it on a platter. Scatter roasted
+                cashew halves, chopped cilantro and shredded carrots on the
+                spaghetti squash with chicken . You may serve a yogurt salad on
+                the side.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">chicken breast</p>
+              <p class="single-ingredient">spaghetti squash</p>
+              <p class="single-ingredient">Vermicelli</p>
+              <p class="single-ingredient">Spices</p>
+              <p class="single-ingredient">Ginger and Garlic</p>
+              <p class="single-ingredient">Cashews</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">oven</p>
+              <p class="single-tool">Large Heavy Pot With Lid</p>
+              <p class="single-tool">Measuring Spoons</p>
+              <p class="single-tool">Measuring Cups</p>
+              <p class="single-tool">Spatula</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="spaghetti-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="spaghetti-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='./scripts/min.chart.js') }}"></script>
+  <script>
+    // Spaghetti Charts
+
+    // Spaghetti Line Chart
+    const line_data = {
+      ctx: document.getElementById('spaghetti-line-chart'),
+      type: 'line',
+      title: 'Popularity of Spaghetti over the years',
+      data: [12, 15, 13, 15, 16, 17],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const line_config = {
+      type: line_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: line_data.title,
+          },
+        },
+      },
+      data: {
+        labels: line_data.labels,
+        datasets: [
+          {
+            label: line_data.label,
+            data: line_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(line_data.ctx, line_config)
+
+    //Spaghetti Pie Chart
+    const pie_data = {
+      ctx: document.getElementById('spaghetti-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 548 Cal per 1 serving of Spaghetti',
+      data: [30, 40, 8, 35, 2, 1],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const pie_config = {
+      type: pie_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: pie_data.title,
+          },
+        },
+      },
+      data: {
+        labels: pie_data.labels,
+        datasets: [
+          {
+            label: pie_data.label,
+            data: pie_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(pie_data.ctx, pie_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <div class="external-navbar"></div>
+  <!-- end of Navbar -->
+  <main class="page">
+    <section class="contact-container">
+      <article class="contact-info">
+        <h3>Want To Get In Touch?</h3>
+        <p>
+          Want to dish up a question, suggestion or concern? Were ready to
+          help.
+        </p>
+        <p>
+          Use this form to submit your thoughts or provide feedback. Or check
+          our Customer Care FAQ. To connect with specific departments, read
+          on.
+        </p>
+        <h3>Connect with Us on Social Media</h3>
+        <p>
+          <b>Instagram:</b>
+          <a href="https://www.instagram.com/myrecipebook/" data-name="www.instagram.com/myrecipebook/"
+            data-module="content engagement" data-position="embedded links"
+            rel="nofollow">instagram.com/myrecipebook</a>
+        </p>
+        <p>
+          <b>facebook:</b>
+          <a href="https://www.facebook.com/myrecipebook" data-name="www.facebook.com/myrecipebook"
+            data-module="content engagement" data-position="embedded links" target="_blank"
+            rel="nofollow noopener noreferrer">facebook.com/myrecipebook</a>
+        </p>
+        <p>
+          <b>Pinterest:</b>
+          <a href="https://www.pinterest.com/my_recipe_book" data-name="www.pinterest.com/my_recipe_book"
+            data-module="content engagement" data-position="embedded links" target="_blank"
+            rel="nofollow noopener noreferrer">pinterest.com/my_recipe_book</a>
+        </p>
+        <p>
+          <b>Tiktok:</b>
+          <a href="https://www.tiktok.com/@myrecipebook?lang=en" data-name="www.tiktok.com/@myrecipebook?lang=en"
+            data-module="content engagement" data-position="embedded links" rel="nofollow">tiktok.com/myrecipebook</a>
+        </p>
+      </article>
+      <article>
+        <form class="form contact-form" name="my-form" action="{{url_for('contact')}}" method="post">
+          {% if 'error_message' in session %}
+          <div style="color: rgb(226, 168, 168)">{{ session['error_message'] }}</div>
+          {% endif %}
+          {% if 'request_msg' in session %}
+          <div style="color: rgb(111, 194, 136)">{{ session['request_msg'] }}</div>
+          {% endif %}
+          <div id="form">
+            <div class="form-row">
+              <label html="name" class="form-label">your name</label>
+              <input type="text" name="name" id="name" class="form-input" />
+            </div>
+            <div class="form-row">
+              <label html="email" class="form-label">your email</label>
+              <input type="email" name="email" id="email" class="form-input" />
+            </div>
+            <div class="form-row">
+              <textarea name="message" id="message" class="form-textarea"></textarea>
+            </div>
+          </div>
+          <label html="message" id="form-response" class="form-label" style="display: none"></label>
+          <input type="submit" id="submit" class="btn btn-block" value="Submit" />
+        </form>
+      </article>
+    </section>
+    <!-- featured recipes -->
+    <section class="featured-recipes">
+      <h5 class="featured-title">Look At This Awesomesouce!</h5>
+      <div class="recipes-list">
+        <!-- single recipe -->
+        <a href="/recipes/banana_ice_cream" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-5.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Chunky Banana Ice cream</h5>
+          <p>Prep : 1 hr 25 mins. | Cook : 45 mins.</p>
+        </a>
+        <a href="./recipes/spaghetti" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-6.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Spaghetti Squash Pasta</h5>
+          <p>Prep : 1 hr 15 mins. | Cook : 50 mins.</p>
+        </a>
+        <a href="./recipes/dosa" class="recipe">
+          <img src="{{ url_for('static', filename='./assets/recipes/recipe-7.jpeg') }}" class="img recipe-img" alt="" />
+          <h5>Classic South Indian Dosa</h5>
+          <p>Prep : 1 hr 0 mins. | Cook : 15 mins.</p>
+        </a>
+        <!-- end of single recipe -->
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">MyRecipeBook</span> Designed by
+      <a href="/about">The Coders</a>
+    </p>
+  </footer>
+</body>
+<script src="{{ url_for('static', filename='./scripts//jquery.min.js') }}"></script>
+<!-- <script src="{{ url_for('static', filename='./scripts//form-validation.js') }}"></script> -->
+<script src="{{ url_for('static', filename='./scripts//jquery.validate.min.js') }}"></script>
+<script type="text/javascript">
+  $(function () {
+    $('.external-navbar').load("{{ url_for('navbar') }}")
+  })
+</script>
+<script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

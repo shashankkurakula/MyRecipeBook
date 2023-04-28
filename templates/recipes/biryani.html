@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{{ url_for('static', filename='scripts/min.chart.js') }}"></script>
+    <title>Biryani</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-1.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Hydrabadi Chicken Dum Biryani</h2>
+            <p>
+              Hyderabadi chicken dum biryani is a delicious Indian dish made
+              with marinated chicken, aromatic spices, basmati rice, and
+              saffron. The layers of chicken and rice are slow-cooked in a
+              sealed pot, which infuses the dish with rich flavors and makes it
+              incredibly tender
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>2 hr 30 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>1 hr 15 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>3 servings</p>
+              </article>
+            </div>
+          </article>
+
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Hydrabadi Chicken Dum Biryani</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/8Fw_zWPbGog"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Fried Onions: Slice onions very finely and fry until crisp and
+                light golden brown.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Chicken Marination: Combine chicken with all marinade
+                ingredients, ⅓ fried onions and ground biryani spice blend.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Rice Preparation: Rinse basmati rice until clear. Soak ⅓ cup
+                rice in water. Cook remaining rice in rice cooker. For
+                alternative traditional cooking method check our lamb biryani
+                recipe.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Assemble Rice and Chicken Layers: Transfer chicken with marinade
+                to a cooking pot. Top with chopped cilantro, mint, half lemon
+                juice, some olive oil and most of the remaining fried onions.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 5</p>
+                <div></div>
+              </header>
+              <p>
+                Final Rice Layer: Layer all cooked rice. Top with remaining
+                fried onions, lemon juice, saffron water and ghee over the rice.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 6</p>
+                <div></div>
+              </header>
+              <p>
+                On Stove top: Alternatively, heat biryani at medium high for 10
+                to 15 minutes and then simmer at low for one hour until steam
+                builds up well.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Chicken</p>
+              <p class="single-ingredient">Basmati Rice</p>
+              <p class="single-ingredient">Yogurt</p>
+              <p class="single-ingredient">Spices</p>
+              <p class="single-ingredient">Ginger and Garlic</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Blender</p>
+              <p class="single-tool">Large Heavy Pot With Lid</p>
+              <p class="single-tool">Measuring Spoons</p>
+              <p class="single-tool">Measuring Cups</p>
+            </div>
+          </article>
+        </section>
+
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="biryani-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="biryani-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    // Biryani Charts
+
+    // Biryani Line Chart
+    const biryani_line_chart_data = {
+      ctx: document.getElementById('biryani-line-chart'),
+      type: 'line',
+      title: 'Popularity of Biryani over the years',
+      data: [10, 14, 12, 17, 14, 16],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const biryani_line_chart_config = {
+      type: biryani_line_chart_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: biryani_line_chart_data.title,
+          },
+        },
+      },
+      data: {
+        labels: biryani_line_chart_data.labels,
+        datasets: [
+          {
+            label: biryani_line_chart_data.label,
+            data: biryani_line_chart_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(biryani_line_chart_data.ctx, biryani_line_chart_config)
+
+    //Biryani Pie Chart
+    const biryani_pie_chart_data = {
+      ctx: document.getElementById('biryani-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 548 Cal per 1 serving of Biryani',
+      data: [12, 16, 18, 11, 5, 10],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const biryani_pie_chart_config = {
+      type: biryani_pie_chart_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: biryani_pie_chart_data.title,
+          },
+        },
+      },
+      data: {
+        labels: biryani_pie_chart_data.labels,
+        datasets: [
+          {
+            label: biryani_pie_chart_data.label,
+            data: biryani_pie_chart_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(biryani_pie_chart_data.ctx, biryani_pie_chart_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>

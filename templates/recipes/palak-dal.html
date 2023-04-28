@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palak Dal</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+  </head>
+  <body>
+    <!-- section  -->
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <!-- end of section -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-4.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Dal Palak</h2>
+            <p>
+              This dal palak recipe promises to be different than the routine
+              Indian spinach and lentil curries. The combination of dals (chana
+              dal and masoor dal) used here works perfectly well with the
+              spinach.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>1 hr 20 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>0 hr 45 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>3 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Dal Palak</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/sA4Q84_nkLU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Caramelize onions: Saute thinly sliced onions until caramelized.
+                Remove from oil and set aside.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Seasoning Oil: Sauté cumin seeds, garlic and red chilies. Add
+                half the fried onions back. Stir in chili powder. Set aside half
+                of the onion-seasoning oil.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Cook Dal: Add tomatoes to the pot and cook. Then add ginger,
+                green chilies, turmeric, coriander powder, garam masala, kasuri
+                methi and cook. Add drained dals, and simmer until soft and
+                mushy. Check recipe notes for instant pot chana dal.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Spinach: Add spinach, half the onion-seasoning oil, cilantro and
+                simmer. Add lemon juice and adjust seasonings.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 5</p>
+                <div></div>
+              </header>
+              <p>
+                Tadka Topping: Serve the dal hot, topped with remaining
+                onion-seasoning oil.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Spinach</p>
+              <p class="single-ingredient">Chana Dal</p>
+              <p class="single-ingredient">Masoor Dal</p>
+              <p class="single-ingredient">Tomatoes and Onions</p>
+              <p class="single-ingredient">Ginger, Garlic and Spices</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Large Heavy Pot With Lid</p>
+              <p class="single-tool">Measuring Cups</p>
+              <p class="single-tool">Pressure Cooker</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="palak-dal-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="palak-dal-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='./scripts/min.chart.js') }}"></script>
+  <script>
+    // Palak Dal Charts
+
+    // Palak Dal Line Chart
+    const line_data = {
+      ctx: document.getElementById('palak-dal-line-chart'),
+      type: 'line',
+      title: 'Popularity of Palak Dal over the years',
+      data: [12, 11, 13, 16, 18, 17],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const line_config = {
+      type: line_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: line_data.title,
+          },
+        },
+      },
+      data: {
+        labels: line_data.labels,
+        datasets: [
+          {
+            label: line_data.label,
+            data: line_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(line_data.ctx, line_config)
+
+    //Palak Dal Pie Chart
+    const pie_data = {
+      ctx: document.getElementById('palak-dal-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 548 Cal per 1 serving of Palak Dal',
+      data: [30, 40, 8, 35, 2, 1],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const pie_config = {
+      type: pie_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: pie_data.title,
+          },
+        },
+      },
+      data: {
+        labels: pie_data.labels,
+        datasets: [
+          {
+            label: pie_data.label,
+            data: pie_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(pie_data.ctx, pie_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>
+

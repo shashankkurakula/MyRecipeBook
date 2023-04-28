@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='./css/normalize.css') }}"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='./css/main.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <main class="page">
+      <article class="project-info">
+        <h2>Project Highlights:</h2>
+        <h4>
+          Interactive analytics charts, no repeated code, dynamic HTML elements,
+          contact form validation, and responsive web design for compatibility
+          with mobile, iPad, and computer screens.
+        </h4>
+        <h5>
+          Our website development team is proud to announce our new website,
+          which features interactive analytics charts designed with the
+          cutting-edge Charts.js library. To ensure the highest quality user
+          experience, we developed the website with no repeated code and dynamic
+          HTML elements using JQuery. In addition, we implemented contact form
+          validation to ensure that user input is accurate. Our website is also
+          optimized with responsive web design, making it compatible with mobile
+          devices, iPads, and computer screens. We believe that these features
+          will allow our users to easily access and interact with the website's
+          data, gaining valuable insights. We are excited to see the positive
+          impact this website will have on our users.
+        </h5>
+        <p>- The Coders</p>
+      </article>
+
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/pictures/pramod.jpg') }}"
+            class="img recipe-hero-ims"
+          />
+          <article class="recipe-info">
+            <h2>Sai Pramod Kantheti</h2>
+            <p><b> Product Page Designer</b></p>
+            <p>
+              <i>
+                As a MyRecipeBook product page designer, it has been a terrific
+                learning experience to create our website and try to make
+                visually beautiful and interesting product pages for the recipes
+                we publish. It's quite simple to use and has an intuitive
+                interface that allows us to add photographs, descriptions,
+                ingredient lists, and other pertinent information to each recipe
+                page.
+              </i>
+            </p>
+            <p>- Kantheti@usf.edu</p>
+          </article>
+        </section>
+      </div>
+
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/pictures/shashank.jpeg') }}"
+            class="img recipe-hero-ims"
+          />
+          <article class="recipe-info">
+            <h2>Shashank Kurakula</h2>
+            <p><b>Design, Development and Team Lead</b></p>
+            <p>
+              <i>
+                I was the lead developer and designer for the website project. I
+                was responsible for managing the project timeline and ensuring
+                that all deliverables were completed on time and to a high
+                standard. My contributions included designing the website UI,
+                writing the code for the javascript functionality using the
+                popular JQuery, and implementing best practices for coding. I
+                also provided guidance and support to team members throughout
+                the development process and ensured that all code was thoroughly
+                tested and reviewed.
+              </i>
+            </p>
+            <p>- shashankkurakula@usf.edu</p>
+          </article>
+        </section>
+      </div>
+
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/pictures/Ashwin.jpg') }}"
+            class="img recipe-hero-ims"
+          />
+          <article class="recipe-info">
+            <h2>Ashwin Reddy</h2>
+            <p><b>CSS Designer</b></p>
+            <p>
+              <i>
+                As a CSS designer, I was in charge of creating and executing the
+                style and layout of a website using Cascading Style Sheets. As a
+                CSS designer, I collaborate with the team to understand the
+                project's goals and objectives. I worked on altering the
+                appearance of numerous website components such as buttons,
+                menus, photos, and text.
+              </i>
+            </p>
+            <p>- ag146@usf.edu</p>
+          </article>
+        </section>
+      </div>
+
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/pictures/ravi.JPG') }}"
+            class="img recipe-hero-ims"
+          />
+          <article class="recipe-info">
+            <h2>Ravi kishore</h2>
+            <p><b> About Us Page Designer </b></p>
+            <p>
+              <i>
+                My duty as an About Us page designer is to build an
+                aesthetically beautiful and informative page that successfully
+                communicates the website's mission, vision, and team to the
+                public. My knowledge of web design concepts and user experience
+                enabled us to improve the website's legitimacy and reliability.
+              </i>
+            </p>
+            <p>- ravikishorereddy@usf.edu</p>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+</html>

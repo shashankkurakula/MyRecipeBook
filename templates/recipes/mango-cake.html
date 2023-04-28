@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mango Cake</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/normalize.css') }}" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/main.css') }}" />
+  </head>
+  <body>
+    <!-- section  -->
+    <!-- Navbar  -->
+    <div class="external-navbar"></div>
+    <!-- end of Navbar -->
+    <!-- end of section -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="{{ url_for('static', filename='./assets/recipes/recipe-2.jpeg') }}"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>mango cake with cream</h2>
+            <p>
+              Mango cake with fluffy whipped cream, juicy mangoes, intensely
+              flavorful secret sauce, layers of soft sponge cake soaked with
+              juices & aromas, resulting in a moist cake that is SURE TO
+              IMPRESS! This is what sweet summer dreams are made up of.
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>prep time</h5>
+                <p>1 hr 30 mins.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>cook time</h5>
+                <p>0 hr 45 mins.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>serving</h5>
+                <p>4 servings</p>
+              </article>
+            </div>
+          </article>
+          <!-- Youtube link -->
+
+          <a class="cta" href="#google">Watch Recipe Video</a>
+
+          <div id="google" class="modaloverlay">
+            <div class="modal">
+              <a href="#close" class="close">&times;</a>
+              <div>
+                <h1>How to prepare Mango Cake</h1>
+                <div class="hs-responsive-embed-youtube">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/T1NIeBRmY9s"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Youtube link -->
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Easy Sponge Cake: Whisk eggs until foamy, then add sugar,
+                vanilla and whisk at high speed until thick ribbon stage.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>Fold in flour, corn starch and baking powder.</p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Bake cake in a lined cake pan. Use a sharp knife to cut three
+                cake layers.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 4</p>
+                <div></div>
+              </header>
+              <p>
+                Whipped Cream Frosting: Whisk heavy cream with powdered sugar
+                and vanilla until stiff peak stage. Refrigerate until use.
+                Transfer some whipped cream to a piping bag fitted with an open
+                star tip.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 5</p>
+                <div></div>
+              </header>
+              <p>
+                Mango Cake Filling: Cut mangoes chunks and mix with whipped
+                cream. Scoop some mango balls with a melon baller. Puree frozen
+                alphonso mangoes or use ready made puree. Heat some puree and
+                add gelatin. Then stir in white chocolate. Cool and transfer to
+                a squeezable bottle.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 6</p>
+                <div></div>
+              </header>
+              <p>
+                Assemble the Mango Cake: Spread mango puree over the first cake
+                layer. Dollop half the mango chunk-cream mixture over puree and
+                gently flatten the layer. Repeat the second cake - puree - mango
+                chunk-cream layers. Place final cake layer on top.
+              </p>
+            </div>
+            <div class="single-instruction">
+              <header>
+                <p>step 6</p>
+                <div></div>
+              </header>
+              <p>
+                Use whipped cream piping bag to pipe the cream puffs. Place a
+                mango ball in the center of each whipped cream puff.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>ingredients</h4>
+              <p class="single-ingredient">Easy Sponge Cake</p>
+              <p class="single-ingredient">Eggs</p>
+              <p class="single-ingredient">Whipped Cream Icing</p>
+              <p class="single-ingredient">Mango Cake Filling</p>
+              <p class="single-ingredient">White baking chocolate</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Oven</p>
+              <p class="single-tool">knife and peeler</p>
+              <p class="single-tool">whisker</p>
+              <p class="single-tool">Spatula</p>
+            </div>
+          </article>
+        </section>
+        <!-- Charts integration -->
+        <section class="recipe-content">
+          <div>
+            <canvas id="mango-cake-line-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="mango-cake-pie-chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">MyRecipeBook</span> Designed by
+        <a href="/about">The Coders</a>
+      </p>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='scripts/min.chart.js') }}"></script>
+  <script>
+    // Biryani Charts
+
+    // Biryani Line Chart
+    const line_data = {
+      ctx: document.getElementById('mango-cake-line-chart'),
+      type: 'line',
+      title: 'Popularity of Mango Cake over the years',
+      data: [14, 15, 16, 14, 17, 18],
+      label: 'Years',
+      labels: ['2010', '2012', '2014', '2016', '2018', '2020 '],
+    }
+
+    const line_config = {
+      type: line_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: line_data.title,
+          },
+        },
+      },
+      data: {
+        labels: line_data.labels,
+        datasets: [
+          {
+            label: line_data.label,
+            data: line_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(line_data.ctx, line_config)
+
+    //Biryani Pie Chart
+    const pie_data = {
+      ctx: document.getElementById('mango-cake-pie-chart'),
+      type: 'pie',
+      title: 'Nutrition Facts: Total 548 Cal per 1 serving of Mango Cake',
+      data: [25, 35, 12, 27, 4, 3],
+      labels: [
+        'Fat',
+        'Cholesterol',
+        'Sodium',
+        'Carbohydrates',
+        'Protein',
+        'Potassium ',
+      ],
+    }
+
+    const pie_config = {
+      type: pie_data.type,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: pie_data.title,
+          },
+        },
+      },
+      data: {
+        labels: pie_data.labels,
+        datasets: [
+          {
+            label: pie_data.label,
+            data: pie_data.data,
+            borderWidth: 1,
+          },
+        ],
+      },
+    }
+
+    new Chart(pie_data.ctx, pie_config)
+
+    // end of Biryani Charts
+  </script>
+  <script src="{{ url_for('static', filename='./scripts/jquery.min.js') }}"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.external-navbar').load("{{ url_for('navbar') }}")
+    })
+  </script>
+  <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>
