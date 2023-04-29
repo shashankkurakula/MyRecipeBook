@@ -2,4 +2,6 @@
 a simple recipe blog, mainly focused on design and responsiveness
 
 
-![MyRecipeBook_AdobeExpress](https://user-images.githubusercontent.com/37576155/235277063-d4530ce5-482f-4d99-b699-78d255847cf1.gif)
+
+https://user-images.githubusercontent.com/37576155/235277299-c5c05d8f-123f-4bda-be14-6d4de1bfc353.mp4
+
